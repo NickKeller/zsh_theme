@@ -3,7 +3,7 @@ function ip_addr(){
 }
 local ret_status="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ )"
 PROMPT='
-${ret_status} %{$fg[magenta]%}%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%}($(ip_addr)) in %{$fg[cyan]%}${PWD/#$HOME/~}%{$reset_color%} $(git_prompt_info)
+${ret_status} %{$fg[magenta]%}%n%{$reset_color%} at %{$fg[yellow]%}%m%{$reset_color%}(%{$fg[yellow]%}$(ip_addr)%{$reset_color%}%) in %{$fg[cyan]%}${PWD/#$HOME/~}%{$reset_color%} $(git_prompt_info)
 command: '
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}git:(%{$fg[red]%}"
